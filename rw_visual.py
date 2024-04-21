@@ -7,6 +7,9 @@ while True:
 # Построение случайного блуждания и нанесения на диграмму
     rw = RandomWalk()
     rw.fill_walk()
+    # Назначение размера области просмотра.
+    plt.figure(figsize=(10, 6))
+
     point_numbers = list(range(rw.num_points))
     plt.scatter(rw.x_values, rw.y_values, c=point_numbers, cmap = plt.cm.Blues, edgecolor=None, s=15)
 
